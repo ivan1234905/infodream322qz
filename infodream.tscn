@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddg8kl7lbke8g"]
+
+[ext_resource type="Script" path="res://infodream.gd" id="1_7nhs2"]
+
+[node name="rrrr" type="Node2D"]
+script = ExtResource("1_7nhs2")
+
+[node name="jk" type="Button" parent="."]
+offset_left = 395.0
+offset_top = 58.0
+offset_right = 816.0
+offset_bottom = 267.0
+text = "КЛИК"
+
+[node name="mony" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 29.0
+offset_right = 279.0
+offset_bottom = 95.0
+
+[node name="a" type="Button" parent="."]
+offset_left = 398.0
+offset_top = 293.0
+offset_right = 606.0
+offset_bottom = 392.0
+text = "УЛУЧШИТЬ"
+
+[node name="L" type="Label" parent="."]
+offset_left = 460.0
+offset_top = 404.0
+offset_right = 669.0
+offset_bottom = 453.0
+text = "СТОИМОСТЬ"
+
+[node name="s" type="Button" parent="."]
+offset_left = 621.0
+offset_top = 293.0
+offset_right = 818.0
+offset_bottom = 392.0
+text = "АВТОКЛИК"
+
+[node name="M" type="Label" parent="."]
+offset_left = 658.0
+offset_top = 403.0
+offset_right = 795.0
+offset_bottom = 457.0
+text = "СТОИМОСТЬ"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="pressed" from="jk" to="." method="_on_jk_pressed"]
+[connection signal="pressed" from="a" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="s" to="." method="_on_s_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
